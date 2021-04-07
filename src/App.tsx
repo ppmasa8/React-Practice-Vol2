@@ -27,19 +27,19 @@ const dummyBooks: BookToRead[] = [
 const App = () => {
   const [books, setBooks] = useState(dummyBooks);
 
-  const handleBookMemoChange = (id :number, memo: string) => {
+  const handleBookMemoChange = (id: number, memo: string) => {
     const newBooks = books.map((b) => {
-      return b.id ===id ? { ...b, memo: memo } : b;
+      return b.id === id ? { ...b, memo: memo } : b;
     });
     setBooks(newBooks);
-  }
+  };
 
-  const handleBookDelete = (id :number) => {
+  const handleBookDelete = (id: number) => {
     const newBooks = books.filter((b) => b.id !== id);
     setBooks(newBooks);
-  }
+  };
 
-  const bookRows = dummyBooks.map((b) => {
+  const bookRows = books.map((b) => {
     return (
         <BookRow
             book={b}
