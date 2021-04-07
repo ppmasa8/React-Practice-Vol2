@@ -1,5 +1,5 @@
-import {BookToRead} from "./BookToRead";
 import React from "react";
+import {BookToRead} from "./BookToRead";
 
 type BookRowProps = {
     book: BookToRead;
